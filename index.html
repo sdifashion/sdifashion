@@ -11,16 +11,17 @@ button,input,select{font:inherit}button{cursor:pointer;border:0;border-radius:10
 main{padding:30px 34px;min-width:0}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px;gap:16px}.eyebrow{color:var(--gold);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase}.top h1{font:32px Georgia,serif;margin:4px 0}.top p{margin:0;color:var(--muted)}.date{color:var(--muted);font-size:13px}
 .cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;margin-bottom:24px}.stat,.panel{background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}.stat{padding:18px}.stat label{color:var(--muted);font-size:12px}.stat strong{display:block;font:27px Georgia,serif;margin:7px 0 2px}.stat small{color:var(--muted)}.panel{padding:20px;margin-bottom:20px}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.panel h2{font:22px Georgia,serif;margin:0}.toolbar{display:flex;gap:9px;flex-wrap:wrap}.search{border:1px solid var(--line);background:white;border-radius:10px;padding:10px 12px;min-width:190px}
 table{width:100%;border-collapse:collapse;text-align:left}th{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);font-weight:700;padding:11px 10px;border-bottom:1px solid var(--line)}td{padding:13px 10px;border-bottom:1px solid #efeee8;font-size:14px}tr:last-child td{border-bottom:0}.pill{display:inline-block;border-radius:20px;padding:4px 9px;font-size:11px;font-weight:700;background:var(--sage);color:var(--green)}.pill.low{background:#fff0d9;color:#96651e}.pill.out{background:#fae8e5;color:var(--red)}.muted{color:var(--muted)}.empty{text-align:center;padding:35px;color:var(--muted)}
-.view{display:none}.view.active{display:block}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.field{display:grid;gap:6px}.field label{font-size:12px;font-weight:700;color:var(--muted)}.field input,.field select{width:100%;border:1px solid var(--line);border-radius:9px;padding:11px;background:white;color:var(--ink)}.modal-bg{position:fixed;inset:0;background:#17251f88;display:none;align-items:center;justify-content:center;padding:18px;z-index:5}.modal-bg.open{display:flex}.modal{background:var(--paper);border-radius:18px;padding:24px;width:min(460px,100%);max-height:90vh;overflow:auto;box-shadow:0 25px 80px #0003}.modal h2{font:25px Georgia,serif;margin:0 0 18px}.modal-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:18px}.bill-layout{display:grid;grid-template-columns:1fr 340px;gap:18px}.bill-summary{background:#f3f5ef;border-radius:13px;padding:16px}.bill-summary strong{font:25px Georgia,serif}.bill-line{display:grid;grid-template-columns:2fr 90px 100px 35px;gap:8px;margin:9px 0}.bill-line input,.bill-line select{min-width:0;width:100%;padding:9px;border:1px solid var(--line);border-radius:8px;background:white}.notice{font-size:12px;color:var(--muted);margin-top:12px}.hidden{display:none!important}
+.view{display:none}.view.active{display:block}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.field{display:grid;gap:6px}.field label{font-size:12px;font-weight:700;color:var(--muted)}.field input,.field select{width:100%;border:1px solid var(--line);border-radius:9px;padding:11px;background:white;color:var(--ink)}.modal-bg{position:fixed;inset:0;background:#17251f88;display:none;align-items:center;justify-content:center;padding:18px;z-index:5}.modal-bg.open{display:flex}.modal{background:var(--paper);border-radius:18px;padding:24px;width:min(520px,100%);max-height:90vh;overflow:auto;box-shadow:0 25px 80px #0003}.modal h2{font:25px Georgia,serif;margin:0 0 18px}.modal-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:18px}.bill-layout{display:grid;grid-template-columns:1fr 340px;gap:18px}.bill-summary{background:#f3f5ef;border-radius:13px;padding:16px}.bill-summary strong{font:25px Georgia,serif}.bill-line{display:grid;grid-template-columns:2fr 90px 100px 35px;gap:8px;margin:9px 0}.bill-line input,.bill-line select{min-width:0;width:100%;padding:9px;border:1px solid var(--line);border-radius:8px;background:white}.notice{font-size:12px;color:var(--muted);margin-top:12px}.hidden{display:none!important}
 @media(max-width:900px){.shell{grid-template-columns:1fr}.sidebar{padding:14px;gap:12px}.brand{padding:0 8px}.nav{display:flex;overflow:auto}.nav button{white-space:nowrap}.side-note{display:none}main{padding:22px 16px}.cards{grid-template-columns:repeat(2,1fr)}.bill-layout{grid-template-columns:1fr}}
 @media(max-width:540px){.top{align-items:flex-start;flex-direction:column}.top h1{font-size:28px}.cards{gap:9px}.stat{padding:13px}.stat strong{font-size:23px}.panel{padding:14px;overflow:auto}.form-grid{grid-template-columns:1fr}.bill-line{grid-template-columns:1fr 65px 80px 30px}table{min-width:600px}}
-@media print{@page{margin:0}html,body{background:#fff!important;margin:0}body *{visibility:hidden}.modal-bg,.modal{position:static!important;background:none!important;box-shadow:none!important;padding:0!important;max-height:none!important;overflow:visible!important}.print-area,.print-area *{visibility:visible}.print-area{position:absolute;left:0;top:0;padding:0!important;background:none!important}.rcpt{box-shadow:none!important;padding:2mm 1mm!important;margin:0!important}.no-print{display:none!important}}
+@media print{@page{margin:0}html,body{background:#fff!important;margin:0}body *{visibility:hidden}.modal-bg,.modal{position:static!important;background:none!important;box-shadow:none!important;padding:0!important;max-height:none!important;overflow:visible!important}.print-area,.print-area *{visibility:visible}.print-area{position:absolute;left:0;top:0;padding:0!important;background:none!important}.print-area{width:100%}.rcpt{box-shadow:none!important;padding:4mm 0!important;margin:0 auto!important}.no-print{display:none!important}}
 
 .login-screen{position:fixed;inset:0;background:linear-gradient(135deg,#263d33,#456653);display:flex;align-items:center;justify-content:center;padding:18px;z-index:20}.login-card{background:var(--paper);border-radius:20px;padding:30px;width:min(430px,100%);box-shadow:0 25px 80px #0004}.login-card h1{font:30px Georgia,serif;margin:5px 0}.login-card p{color:var(--muted)}.login-card .field{margin:14px 0}.login-help{background:#f0f3ed;border-radius:10px;padding:12px;font-size:12px;color:#53665a;margin-top:16px}.user-tools{display:flex;align-items:center;gap:10px;color:#e0e8df;font-size:12px;padding:0 10px;flex-wrap:wrap}
 .busy{position:fixed;inset:0;background:#17251f55;display:none;align-items:center;justify-content:center;z-index:50}.busy.on{display:flex}.busy div{background:var(--paper);padding:16px 22px;border-radius:12px;box-shadow:var(--shadow);font-weight:650}
 
 .rcpt{--rw:72mm;width:var(--rw);max-width:100%;margin:0 auto;background:#fff;color:#000;font:12px/1.35 Arial,Helvetica,sans-serif;padding:14px 12px;box-shadow:0 2px 12px #0002}
 .rcpt.w58{--rw:48mm;font-size:11px}
+.rcpt.env10{--rw:97mm;font-size:14.5px;padding:18px 16px}.rcpt.env10 .shop{font-size:28px}.rcpt.env10 .tag{font-size:12px}.rcpt.env10 .sm{font-size:12px}.rcpt.env10 .tot{font-size:20px}.rcpt.env10 .big{font-size:16px}.rcpt.env10 .it{margin:7px 0}
 .rcpt .ctr{text-align:center}.rcpt .shop{font:800 20px/1.1 Arial,sans-serif;letter-spacing:1px}.rcpt .tag{font-size:10px;letter-spacing:2px;margin-top:2px}
 .rcpt .hr{border-top:1px dashed #000;margin:7px 0}.rcpt .hr2{border-top:2px solid #000;margin:7px 0}
 .rcpt .kv{display:flex;justify-content:space-between;gap:8px}.rcpt .kv span:last-child{text-align:right}
@@ -29,7 +30,7 @@ table{width:100%;border-collapse:collapse;text-align:left}th{font-size:11px;lett
 .rcpt .big{font-size:13px;font-weight:700;margin-top:4px}.rcpt .sm{font-size:10px}
 .rcpt-wrap{background:#eceae3;border-radius:12px;padding:18px 8px}
 
-</style></head>
+</style><style id="pageStyle"></style></head>
 <body>
 <div class="busy" id="busy"><div id="busyMsg">Working…</div></div>
 <div class="login-screen" id="loginScreen"><div class="login-card"><div class="eyebrow">SDI FASHION · SECURE WORKSPACE</div><h1>Welcome back</h1><p>Sign in to access the SDI Fashion workspace.</p><form onsubmit="login(event)"><div class="field"><label>Username</label><input id="loginUser" required autocomplete="username" placeholder="Enter username"></div><div class="field"><label>Password</label><input id="loginPass" required type="password" autocomplete="current-password" placeholder="Enter password"></div><button class="primary" id="loginBtn" style="width:100%;margin-top:8px">Sign in</button><div id="loginError" style="color:#b84e45;font-size:13px;margin-top:10px"></div></form></div></div>
@@ -43,7 +44,6 @@ table{width:100%;border-collapse:collapse;text-align:left}th{font-size:11px;lett
   <button data-view="sales">▥ &nbsp; Sales & bills</button>
   <button data-view="customers">♙ &nbsp; Customers</button>
   <button data-view="history">◷ &nbsp; Stock history</button>
-  <button data-view="users">⚿ &nbsp; Users & access</button>
  </nav>
  <div class="user-tools"><span id="userLabel">Signed in</span><button class="secondary small" onclick="openChangePassword()">Password</button><button class="secondary small" onclick="logout()">Sign out</button></div>
  <div class="side-note">A calmer way to run your textile business.<br><br>Data saved to Google Sheets</div>
@@ -76,7 +76,6 @@ table{width:100%;border-collapse:collapse;text-align:left}th{font-size:11px;lett
 <section class="view" id="sales"><div class="panel"><div class="panel-head"><h2>Sales & bills</h2><input class="search" id="salesSearch" placeholder="Search bill or customer…" oninput="renderSales()"></div><div id="salesTable"></div></div></section>
 <section class="view" id="customers"><div class="panel"><div class="panel-head"><h2>Customer directory</h2><div class="toolbar"><input class="search" id="customerSearch" placeholder="Search customers…" oninput="renderCustomers()"><button class="primary admin-only" onclick="openCustomer()">＋ Add customer</button></div></div><div id="customerTable"></div></div></section>
 <section class="view" id="history"><div class="panel"><div class="panel-head"><h2>Stock movement history</h2><span class="pill">Receipts & sales recorded</span></div><p class="muted">Every stock receipt and sale is kept here for future reference.</p><div id="historyTable"></div></div></section>
-<section class="view" id="users"><div class="panel"><div class="panel-head"><h2>Users & access</h2><button class="primary admin-only" onclick="openUser()">＋ Add user</button></div><p class="muted">Passwords are stored securely (hashed) in the Users sheet. Use this page to add staff or reset a password.</p><div id="usersTable"></div></div></section>
 </main></div>
 <div class="modal-bg" id="modalBg" onclick="if(event.target===this)closeModal()"><div class="modal" id="modal"></div></div>
 <script>
@@ -84,11 +83,10 @@ table{width:100%;border-collapse:collapse;text-align:left}th{font-size:11px;lett
 const API_URL='https://script.google.com/macros/s/AKfycbymMsyOn_1PexbzI_pxe4idCux37gcpasUkSOt0JCdW5un2oJl8tCr3lkdwQ20P9Q7j/exec';
 
 /* ===== SHOP DETAILS shown on invoices (leave '' to hide a line) ===== */
-const SHOP={name:'SDI Fashion',tagline:'FASHION HOUSE',address:'',phone:'',email:'',footer:'Goods once sold can be exchanged within 7 days with this bill.',paper:'80mm'}; // paper: '80mm' or '58mm'
+const SHOP={name:'SDI Fashion',tagline:'FASHION HOUSE',address:'Opposite Shilpagayawa, Mulanagoda Road, Angunukolapelessa',phone:'0742280809',email:'',footer:'Goods once sold can be exchanged within 7 days with this bill.',paper:'env10'}; // paper: 'env10' (Envelope #10, 4.125 x 9.5 in), '80mm' or '58mm'
 
 const TOKEN_KEY='sdifashion_session';
 let data={products:[],customers:[],sales:[],stockHistory:[]};
-let users=[];
 let currentUser=null;
 
 /* ---------- API ---------- */
@@ -122,7 +120,7 @@ function startSession(user,d){
   applyRole();showView(isAdmin()?'dashboard':'billing');
 }
 function endSession(msg){
-  sessionStorage.removeItem(TOKEN_KEY);currentUser=null;data={products:[],customers:[],sales:[],stockHistory:[]};users=[];
+  sessionStorage.removeItem(TOKEN_KEY);currentUser=null;data={products:[],customers:[],sales:[],stockHistory:[]};
   closeModal();document.getElementById('billLines').innerHTML='';
   document.getElementById('appShell').style.display='none';
   document.getElementById('loginScreen').style.display='flex';
@@ -133,7 +131,7 @@ async function refreshData(){await run(async()=>{const out=await api('load');dat
 
 function isAdmin(){return currentUser?.role==='admin'}
 function requireAdmin(){if(!isAdmin()){alert('Only an administrator can make this change.');return false}return true}
-const ADMIN_VIEWS=['dashboard','users'];
+const ADMIN_VIEWS=['dashboard'];
 function applyRole(){const a=isAdmin();document.querySelectorAll('.nav button').forEach(b=>b.style.display=(a||!ADMIN_VIEWS.includes(b.dataset.view))?'':'none');document.querySelectorAll('.admin-only').forEach(x=>x.style.display=a?'':'none')}
 
 /* ---------- Helpers ---------- */
@@ -148,9 +146,8 @@ function showView(v){
   if(ADMIN_VIEWS.includes(v)&&!isAdmin())v='billing';
   document.querySelectorAll('.view').forEach(x=>x.classList.toggle('active',x.id===v));
   document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.view===v));
-  document.getElementById('pageTitle').textContent=({dashboard:"Good day. Here's your overview.",inventory:'Your inventory',billing:'Create a bill',sales:'Sales & bills',customers:'Your customers',history:'Stock history',users:'Users & access'})[v];
+  document.getElementById('pageTitle').textContent=({dashboard:"Good day. Here's your overview.",inventory:'Your inventory',billing:'Create a bill',sales:'Sales & bills',customers:'Your customers',history:'Stock history'})[v];
   if(v==='billing'){populateCustomers();if(!document.querySelector('.bill-line'))addBillLine()}
-  if(v==='users')loadUsers();
   renderAll();
 }
 document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>showView(b.dataset.view));
@@ -174,17 +171,7 @@ async function saveProduct(e,id){e.preventDefault();if(!requireAdmin())return;co
 function openCustomer(id){if(!requireAdmin())return;let c=data.customers.find(x=>x.id===id)||{};openModal(`<h2>${id?'Edit customer':'Add customer'}</h2><form onsubmit="saveCustomer(event,'${id||''}')"><div class="form-grid"><div class="field"><label>Customer name *</label><input name="name" required value="${esc(c.name||'')}"></div><div class="field"><label>Phone number</label><input name="phone" value="${esc(c.phone||'')}"></div><div class="field"><label>Email</label><input name="email" type="email" value="${esc(c.email||'')}"></div><div class="field"><label>Address</label><input name="address" value="${esc(c.address||'')}"></div></div><div class="modal-actions"><button type="button" class="secondary" onclick="closeModal()">Cancel</button><button class="primary">Save customer</button></div></form>`)}
 async function saveCustomer(e,id){e.preventDefault();if(!requireAdmin())return;const f=Object.fromEntries(new FormData(e.target));await run(async()=>{const out=await api('saveCustomer',{customer:{id,...f}});data=out.data;closeModal();renderAll()})}
 
-/* ---------- Users ---------- */
-async function loadUsers(){if(!isAdmin())return;await run(async()=>{users=(await api('listUsers')).users;renderUsers()},'Loading…')}
-function renderUsers(){document.getElementById('usersTable').innerHTML=users.length?`<table><thead><tr><th>Username</th><th>Display name</th><th>Role</th><th>Status</th><th>Actions</th></tr></thead><tbody>${users.map(u=>`<tr><td><b>${esc(u.username)}</b></td><td>${esc(u.label)}</td><td>${u.role==='admin'?'Administrator':'Cashier'}</td><td>${u.active==='yes'?'<span class="pill">Active</span>':'<span class="pill out">Disabled</span>'}</td><td><button class="secondary small" onclick="openUser('${esc(u.username)}')">Edit</button></td></tr>`).join('')}</tbody></table>`:'<div class="empty">No users loaded.</div>'}
-function openUser(username){if(!requireAdmin())return;const u=users.find(x=>x.username===username);const isNew=!u;openModal(`<h2>${isNew?'Add user':'Edit user'}</h2><form onsubmit="saveUser(event,${isNew})"><div class="form-grid">
-<div class="field"><label>Username *</label><input name="username" required ${isNew?'':'readonly'} value="${esc(u?.username||'')}" autocomplete="off" placeholder="e.g. nimal"></div>
-<div class="field"><label>Display name</label><input name="label" value="${esc(u?.label||'')}" placeholder="e.g. Cashier – Nimal"></div>
-<div class="field"><label>Role</label><select name="role"><option value="cashier" ${u?.role!=='admin'?'selected':''}>Cashier</option><option value="admin" ${u?.role==='admin'?'selected':''}>Administrator</option></select></div>
-<div class="field"><label>Status</label><select name="active"><option value="yes" ${u?.active!=='no'?'selected':''}>Active</option><option value="no" ${u?.active==='no'?'selected':''}>Disabled</option></select></div>
-<div class="field"><label>${isNew?'Password *':'New password'}</label><input name="password" type="password" minlength="8" ${isNew?'required':''} autocomplete="new-password" placeholder="${isNew?'At least 8 characters':'Leave blank to keep current'}"></div>
-</div><div class="modal-actions"><button type="button" class="secondary" onclick="closeModal()">Cancel</button><button class="primary">Save user</button></div></form>`)}
-async function saveUser(e,isNew){e.preventDefault();const f=Object.fromEntries(new FormData(e.target));await run(async()=>{users=(await api('saveUser',{user:{...f,isNew}})).users;closeModal();renderUsers()})}
+/* ---------- Password ---------- */
 function openChangePassword(){openModal(`<h2>Change your password</h2><form onsubmit="changePassword(event)"><div class="field"><label>Current password</label><input name="old" type="password" required autocomplete="current-password"></div><div class="field" style="margin-top:12px"><label>New password</label><input name="nw" type="password" minlength="8" required autocomplete="new-password"></div><div class="field" style="margin-top:12px"><label>Confirm new password</label><input name="nw2" type="password" minlength="8" required autocomplete="new-password"></div><div class="modal-actions"><button type="button" class="secondary" onclick="closeModal()">Cancel</button><button class="primary">Change password</button></div></form>`)}
 async function changePassword(e){e.preventDefault();const f=Object.fromEntries(new FormData(e.target));if(f.nw!==f.nw2){alert('New passwords do not match.');return}await run(async()=>{await api('changePassword',{oldPassword:f.old,newPassword:f.nw});closeModal();alert('Password changed.')})}
 
@@ -214,11 +201,12 @@ async function completeSale(){
   },'Completing sale…');
 }
 function printBill(id){let s=data.sales.find(x=>x.id===id);if(!s)return;
+document.getElementById('pageStyle').textContent=SHOP.paper==='env10'?'@media print{@page{size:4.125in 9.5in;margin:0}}':'';
 const when=s.createdAt?new Date(s.createdAt):null;const time=when&&!isNaN(when)?when.toLocaleTimeString('en-LK',{hour:'2-digit',minute:'2-digit'}):'';
 const num=n=>Number(n||0).toLocaleString('en-LK',{minimumFractionDigits:2,maximumFractionDigits:2});
 const kv=(a,b,cls='')=>`<div class="kv ${cls}"><span>${a}</span><span>${b}</span></div>`;
 const qty=s.lines.reduce((t,x)=>t+(+x.qty||0),0);
-openModal(`<div class="rcpt-wrap"><div class="print-area"><div class="rcpt ${SHOP.paper==='58mm'?'w58':''}">
+openModal(`<div class="rcpt-wrap"><div class="print-area"><div class="rcpt ${{'58mm':'w58',env10:'env10'}[SHOP.paper]||''}">
 <div class="ctr"><div class="shop">${esc(SHOP.name.toUpperCase())}</div>${SHOP.tagline?`<div class="tag">${esc(SHOP.tagline)}</div>`:''}${[SHOP.address,SHOP.phone&&'Tel: '+SHOP.phone,SHOP.email].filter(Boolean).map(x=>`<div class="sm">${esc(x)}</div>`).join('')}</div>
 <div class="hr2"></div>
 ${kv('Bill No',`<b>${esc(s.number)}</b>`)}${kv('Date',esc(s.date)+(time?' '+time:''))}${s.by?kv('Cashier',esc(s.by)):''}${kv('Customer',esc(s.customer))}
