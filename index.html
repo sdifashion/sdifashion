@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>THREAD & CO. | Textile Management</title>
+<title>SDI Fashion | Shop Management</title>
 <style>
 :root{--ink:#24332d;--muted:#75827a;--cream:#f7f5ef;--paper:#fffefa;--green:#345b4a;--sage:#dce7dc;--gold:#c49b55;--line:#e8e6dd;--red:#b84e45;--shadow:0 12px 35px #25372b12}
 *{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}
@@ -11,20 +11,31 @@ button,input,select{font:inherit}button{cursor:pointer;border:0;border-radius:10
 main{padding:30px 34px;min-width:0}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px;gap:16px}.eyebrow{color:var(--gold);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase}.top h1{font:32px Georgia,serif;margin:4px 0}.top p{margin:0;color:var(--muted)}.date{color:var(--muted);font-size:13px}
 .cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;margin-bottom:24px}.stat,.panel{background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}.stat{padding:18px}.stat label{color:var(--muted);font-size:12px}.stat strong{display:block;font:27px Georgia,serif;margin:7px 0 2px}.stat small{color:var(--muted)}.panel{padding:20px;margin-bottom:20px}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.panel h2{font:22px Georgia,serif;margin:0}.toolbar{display:flex;gap:9px;flex-wrap:wrap}.search{border:1px solid var(--line);background:white;border-radius:10px;padding:10px 12px;min-width:190px}
 table{width:100%;border-collapse:collapse;text-align:left}th{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);font-weight:700;padding:11px 10px;border-bottom:1px solid var(--line)}td{padding:13px 10px;border-bottom:1px solid #efeee8;font-size:14px}tr:last-child td{border-bottom:0}.pill{display:inline-block;border-radius:20px;padding:4px 9px;font-size:11px;font-weight:700;background:var(--sage);color:var(--green)}.pill.low{background:#fff0d9;color:#96651e}.pill.out{background:#fae8e5;color:var(--red)}.muted{color:var(--muted)}.empty{text-align:center;padding:35px;color:var(--muted)}
-.view{display:none}.view.active{display:block}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.field{display:grid;gap:6px}.field label{font-size:12px;font-weight:700;color:var(--muted)}.field input,.field select{width:100%;border:1px solid var(--line);border-radius:9px;padding:11px;background:white;color:var(--ink)}.modal-bg{position:fixed;inset:0;background:#17251f88;display:none;align-items:center;justify-content:center;padding:18px;z-index:5}.modal-bg.open{display:flex}.modal{background:var(--paper);border-radius:18px;padding:24px;width:min(560px,100%);max-height:90vh;overflow:auto;box-shadow:0 25px 80px #0003}.modal h2{font:25px Georgia,serif;margin:0 0 18px}.modal-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:18px}.bill-layout{display:grid;grid-template-columns:1fr 340px;gap:18px}.bill-summary{background:#f3f5ef;border-radius:13px;padding:16px}.bill-summary strong{font:25px Georgia,serif}.bill-line{display:grid;grid-template-columns:2fr 90px 100px 35px;gap:8px;margin:9px 0}.bill-line input,.bill-line select{min-width:0;width:100%;padding:9px;border:1px solid var(--line);border-radius:8px;background:white}.notice{font-size:12px;color:var(--muted);margin-top:12px}.hidden{display:none!important}
+.view{display:none}.view.active{display:block}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.field{display:grid;gap:6px}.field label{font-size:12px;font-weight:700;color:var(--muted)}.field input,.field select{width:100%;border:1px solid var(--line);border-radius:9px;padding:11px;background:white;color:var(--ink)}.modal-bg{position:fixed;inset:0;background:#17251f88;display:none;align-items:center;justify-content:center;padding:18px;z-index:5}.modal-bg.open{display:flex}.modal{background:var(--paper);border-radius:18px;padding:24px;width:min(460px,100%);max-height:90vh;overflow:auto;box-shadow:0 25px 80px #0003}.modal h2{font:25px Georgia,serif;margin:0 0 18px}.modal-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:18px}.bill-layout{display:grid;grid-template-columns:1fr 340px;gap:18px}.bill-summary{background:#f3f5ef;border-radius:13px;padding:16px}.bill-summary strong{font:25px Georgia,serif}.bill-line{display:grid;grid-template-columns:2fr 90px 100px 35px;gap:8px;margin:9px 0}.bill-line input,.bill-line select{min-width:0;width:100%;padding:9px;border:1px solid var(--line);border-radius:8px;background:white}.notice{font-size:12px;color:var(--muted);margin-top:12px}.hidden{display:none!important}
 @media(max-width:900px){.shell{grid-template-columns:1fr}.sidebar{padding:14px;gap:12px}.brand{padding:0 8px}.nav{display:flex;overflow:auto}.nav button{white-space:nowrap}.side-note{display:none}main{padding:22px 16px}.cards{grid-template-columns:repeat(2,1fr)}.bill-layout{grid-template-columns:1fr}}
 @media(max-width:540px){.top{align-items:flex-start;flex-direction:column}.top h1{font-size:28px}.cards{gap:9px}.stat{padding:13px}.stat strong{font-size:23px}.panel{padding:14px;overflow:auto}.form-grid{grid-template-columns:1fr}.bill-line{grid-template-columns:1fr 65px 80px 30px}table{min-width:600px}}
-@media print{body *{visibility:hidden}.print-area,.print-area *{visibility:visible}.print-area{position:absolute;left:0;top:0;width:100%;padding:25px;background:white}.no-print{display:none!important}}
+@media print{@page{margin:0}html,body{background:#fff!important;margin:0}body *{visibility:hidden}.modal-bg,.modal{position:static!important;background:none!important;box-shadow:none!important;padding:0!important;max-height:none!important;overflow:visible!important}.print-area,.print-area *{visibility:visible}.print-area{position:absolute;left:0;top:0;padding:0!important;background:none!important}.rcpt{box-shadow:none!important;padding:2mm 1mm!important;margin:0!important}.no-print{display:none!important}}
 
 .login-screen{position:fixed;inset:0;background:linear-gradient(135deg,#263d33,#456653);display:flex;align-items:center;justify-content:center;padding:18px;z-index:20}.login-card{background:var(--paper);border-radius:20px;padding:30px;width:min(430px,100%);box-shadow:0 25px 80px #0004}.login-card h1{font:30px Georgia,serif;margin:5px 0}.login-card p{color:var(--muted)}.login-card .field{margin:14px 0}.login-help{background:#f0f3ed;border-radius:10px;padding:12px;font-size:12px;color:#53665a;margin-top:16px}.user-tools{display:flex;align-items:center;gap:10px;color:#e0e8df;font-size:12px;padding:0 10px;flex-wrap:wrap}
 .busy{position:fixed;inset:0;background:#17251f55;display:none;align-items:center;justify-content:center;z-index:50}.busy.on{display:flex}.busy div{background:var(--paper);padding:16px 22px;border-radius:12px;box-shadow:var(--shadow);font-weight:650}
+
+.rcpt{--rw:72mm;width:var(--rw);max-width:100%;margin:0 auto;background:#fff;color:#000;font:12px/1.35 Arial,Helvetica,sans-serif;padding:14px 12px;box-shadow:0 2px 12px #0002}
+.rcpt.w58{--rw:48mm;font-size:11px}
+.rcpt .ctr{text-align:center}.rcpt .shop{font:800 20px/1.1 Arial,sans-serif;letter-spacing:1px}.rcpt .tag{font-size:10px;letter-spacing:2px;margin-top:2px}
+.rcpt .hr{border-top:1px dashed #000;margin:7px 0}.rcpt .hr2{border-top:2px solid #000;margin:7px 0}
+.rcpt .kv{display:flex;justify-content:space-between;gap:8px}.rcpt .kv span:last-child{text-align:right}
+.rcpt .it{margin:5px 0}.rcpt .it b{display:block;font-weight:700}
+.rcpt .tot{font-size:16px;font-weight:800;margin:3px 0}
+.rcpt .big{font-size:13px;font-weight:700;margin-top:4px}.rcpt .sm{font-size:10px}
+.rcpt-wrap{background:#eceae3;border-radius:12px;padding:18px 8px}
+
 </style></head>
 <body>
 <div class="busy" id="busy"><div id="busyMsg">Working…</div></div>
-<div class="login-screen" id="loginScreen"><div class="login-card"><div class="eyebrow">THREAD & CO. · SECURE WORKSPACE</div><h1>Welcome back</h1><p>Sign in to access your textile business workspace.</p><form onsubmit="login(event)"><div class="field"><label>Username</label><input id="loginUser" required autocomplete="username" placeholder="Enter username"></div><div class="field"><label>Password</label><input id="loginPass" required type="password" autocomplete="current-password" placeholder="Enter password"></div><button class="primary" id="loginBtn" style="width:100%;margin-top:8px">Sign in</button><div id="loginError" style="color:#b84e45;font-size:13px;margin-top:10px"></div></form></div></div>
+<div class="login-screen" id="loginScreen"><div class="login-card"><div class="eyebrow">SDI FASHION · SECURE WORKSPACE</div><h1>Welcome back</h1><p>Sign in to access the SDI Fashion workspace.</p><form onsubmit="login(event)"><div class="field"><label>Username</label><input id="loginUser" required autocomplete="username" placeholder="Enter username"></div><div class="field"><label>Password</label><input id="loginPass" required type="password" autocomplete="current-password" placeholder="Enter password"></div><button class="primary" id="loginBtn" style="width:100%;margin-top:8px">Sign in</button><div id="loginError" style="color:#b84e45;font-size:13px;margin-top:10px"></div></form></div></div>
 <div class="shell" id="appShell" style="display:none">
 <aside class="sidebar">
- <div class="brand"><strong>THREAD & CO.</strong><span>TEXTILE HOUSE · MANAGEMENT</span></div>
+ <div class="brand"><strong>SDI FASHION</strong><span>FASHION HOUSE · MANAGEMENT</span></div>
  <nav class="nav">
   <button class="active" data-view="dashboard">◫ &nbsp; Overview</button>
   <button data-view="inventory">▤ &nbsp; Inventory</button>
@@ -72,7 +83,10 @@ table{width:100%;border-collapse:collapse;text-align:left}th{font-size:11px;lett
 /* ===== CONFIG: paste your Apps Script Web App URL here ===== */
 const API_URL='https://script.google.com/macros/s/AKfycbymMsyOn_1PexbzI_pxe4idCux37gcpasUkSOt0JCdW5un2oJl8tCr3lkdwQ20P9Q7j/exec';
 
-const TOKEN_KEY='threadco_session';
+/* ===== SHOP DETAILS shown on invoices (leave '' to hide a line) ===== */
+const SHOP={name:'SDI Fashion',tagline:'FASHION HOUSE',address:'',phone:'',email:'',footer:'Goods once sold can be exchanged within 7 days with this bill.',paper:'80mm'}; // paper: '80mm' or '58mm'
+
+const TOKEN_KEY='sdifashion_session';
 let data={products:[],customers:[],sales:[],stockHistory:[]};
 let users=[];
 let currentUser=null;
@@ -199,7 +213,25 @@ async function completeSale(){
     data=out.data;resetBill();showView('sales');printBill(out.saleId);
   },'Completing sale…');
 }
-function printBill(id){let s=data.sales.find(x=>x.id===id);if(!s)return;openModal(`<div class="print-area"><div style="text-align:center"><div class="eyebrow">THREAD & CO. · TEXTILE HOUSE</div><h2 style="font:30px Georgia,serif;margin:8px">Sales invoice</h2><p>Thank you for shopping with us</p></div><hr><p><b>Bill:</b> ${esc(s.number)}<br><b>Date:</b> ${esc(s.date)}<br><b>Customer:</b> ${esc(s.customer)}<br><b>Payment:</b> ${esc(s.payment)}</p><table><thead><tr><th>Item</th><th>Qty</th><th>Unit price</th><th>Total</th></tr></thead><tbody>${s.lines.map(x=>`<tr><td>${esc(x.name)}</td><td>${x.qty} ${esc(x.unit)}</td><td>${money(x.price)}</td><td>${money(x.qty*x.price)}</td></tr>`).join('')}</tbody></table><div style="text-align:right;margin-top:20px">Subtotal: ${money(s.subtotal)}<br>Discount: ${money(s.discount)}<h2>Total: ${money(s.total)}</h2></div><p style="text-align:center;margin-top:35px">Thank you — we appreciate your business.</p></div><div class="modal-actions no-print"><button class="secondary" onclick="closeModal()">Close</button><button class="primary" onclick="window.print()">Print / Save PDF</button></div>`)}
+function printBill(id){let s=data.sales.find(x=>x.id===id);if(!s)return;
+const when=s.createdAt?new Date(s.createdAt):null;const time=when&&!isNaN(when)?when.toLocaleTimeString('en-LK',{hour:'2-digit',minute:'2-digit'}):'';
+const num=n=>Number(n||0).toLocaleString('en-LK',{minimumFractionDigits:2,maximumFractionDigits:2});
+const kv=(a,b,cls='')=>`<div class="kv ${cls}"><span>${a}</span><span>${b}</span></div>`;
+const qty=s.lines.reduce((t,x)=>t+(+x.qty||0),0);
+openModal(`<div class="rcpt-wrap"><div class="print-area"><div class="rcpt ${SHOP.paper==='58mm'?'w58':''}">
+<div class="ctr"><div class="shop">${esc(SHOP.name.toUpperCase())}</div>${SHOP.tagline?`<div class="tag">${esc(SHOP.tagline)}</div>`:''}${[SHOP.address,SHOP.phone&&'Tel: '+SHOP.phone,SHOP.email].filter(Boolean).map(x=>`<div class="sm">${esc(x)}</div>`).join('')}</div>
+<div class="hr2"></div>
+${kv('Bill No',`<b>${esc(s.number)}</b>`)}${kv('Date',esc(s.date)+(time?' '+time:''))}${s.by?kv('Cashier',esc(s.by)):''}${kv('Customer',esc(s.customer))}
+<div class="hr"></div>
+${s.lines.map(x=>`<div class="it"><b>${esc(x.name)}</b>${kv(`${x.qty} ${esc(x.unit)} x ${num(x.price)}`,num(x.qty*x.price))}</div>`).join('')}
+<div class="hr"></div>
+${kv(`Items: ${s.lines.length}`,`Qty: ${+qty.toFixed(2)}`,'sm')}
+${kv('Subtotal',num(s.subtotal))}${+s.discount?kv('Discount','-'+num(s.discount)):''}
+<div class="hr2"></div>${kv('TOTAL','LKR '+num(s.total),'tot')}<div class="hr2"></div>
+${kv('Paid by',esc(s.payment))}
+<div class="hr"></div>
+<div class="ctr"><div class="big">Thank you! Come again.</div>${SHOP.footer?`<div class="sm" style="margin-top:3px">${esc(SHOP.footer)}</div>`:''}</div>
+</div></div></div><div class="modal-actions no-print"><button class="secondary" onclick="closeModal()">Close</button><button class="primary" onclick="window.print()">Print bill</button></div>`)}
 function renderSales(){let q=(document.getElementById('salesSearch')?.value||'').toLowerCase();let a=data.sales.filter(s=>(s.number+s.customer+s.date).toLowerCase().includes(q));document.getElementById('salesTable').innerHTML=a.length?`<table><thead><tr><th>Bill no.</th><th>Date</th><th>Customer</th><th>Items</th><th>Total</th><th>Payment</th><th></th></tr></thead><tbody>${a.map(s=>`<tr><td><b>${esc(s.number)}</b></td><td>${esc(s.date)}</td><td>${esc(s.customer)}</td><td>${s.lines.length}</td><td><b>${money(s.total)}</b></td><td>${esc(s.payment)}</td><td><button class="secondary small" onclick="printBill('${s.id}')">View bill</button></td></tr>`).join('')}</tbody></table>`:'<div class="empty">Completed bills will appear here.</div>'}
 function renderDashboard(){let todays=data.sales.filter(s=>s.date===localDate()),salesToday=todays.reduce((sum,s)=>sum+(+s.total||0),0),profitToday=todays.reduce((sum,s)=>sum+(s.profit==null?0:+s.profit),0);document.getElementById('dailySales').textContent=money(salesToday);document.getElementById('dailyProfit').textContent=money(profitToday);document.getElementById('dailyBills').textContent=todays.length;document.getElementById('statItems').textContent=data.products.length;document.getElementById('statUnits').textContent=data.products.reduce((s,p)=>s+(+p.qty||0),0).toLocaleString();let low=data.products.filter(p=>p.qty<=(p.threshold??5));document.getElementById('statLow').textContent=low.length;document.getElementById('statSales').textContent=data.sales.length;document.getElementById('dashStock').innerHTML=low.length?`<table><thead><tr><th>Item</th><th>Available</th><th>Status</th></tr></thead><tbody>${low.slice(0,6).map(p=>`<tr><td>${esc(p.name)}</td><td>${p.qty} ${esc(p.unit)}</td><td>${stockBadge(p)}</td></tr>`).join('')}</tbody></table>`:'<div class="empty">All items are above their low-stock alert levels.</div>';document.getElementById('dashBills').innerHTML=data.sales.length?`<table><thead><tr><th>Bill</th><th>Customer</th><th>Date</th><th>Total</th></tr></thead><tbody>${data.sales.slice(0,5).map(s=>`<tr><td>${esc(s.number)}</td><td>${esc(s.customer)}</td><td>${esc(s.date)}</td><td>${money(s.total)}</td></tr>`).join('')}</tbody></table>`:'<div class="empty">No sales recorded yet.</div>'}
 function renderHistory(){let a=data.stockHistory||[];document.getElementById('historyTable').innerHTML=a.length?`<table><thead><tr><th>Date & time</th><th>Movement</th><th>Item</th><th>Quantity change</th><th>Reference</th><th>Recorded by</th></tr></thead><tbody>${a.map(h=>`<tr><td>${new Date(h.date).toLocaleString()}</td><td>${esc(h.type)}</td><td><b>${esc(h.product)}</b></td><td style="font-weight:700;color:${h.qty<0?'#b84e45':'#345b4a'}">${h.qty>0?'+':''}${h.qty} ${esc(h.unit)}</td><td>${esc(h.reference||'—')}</td><td>${esc(h.by||'—')}</td></tr>`).join('')}</tbody></table>`:'<div class="empty">Stock additions and sales movements will appear here.</div>'}
