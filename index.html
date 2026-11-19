@@ -15,7 +15,7 @@ main{padding:30px 34px;min-width:0}.top{display:flex;justify-content:space-betwe
 .cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;margin-bottom:24px}.stat,.panel{background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}.stat{padding:18px}.stat label{color:var(--muted);font-size:12px}.stat strong{display:block;font:27px Georgia,serif;margin:7px 0 2px}.stat small{color:var(--muted)}.panel{padding:20px;margin-bottom:20px}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.panel h2{font:22px Georgia,serif;margin:0}.toolbar{display:flex;gap:9px;flex-wrap:wrap}.search{border:1px solid var(--line);background:var(--input);color:var(--ink);border-radius:10px;padding:10px 12px;min-width:190px}
 table{width:100%;border-collapse:collapse;text-align:left}th{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);font-weight:700;padding:11px 10px;border-bottom:1px solid var(--line)}td{padding:13px 10px;border-bottom:1px solid var(--row);font-size:14px}tr:last-child td{border-bottom:0}.pill{display:inline-block;border-radius:20px;padding:4px 9px;font-size:11px;font-weight:700;background:var(--sage);color:var(--sage-fg)}.pill.low{background:var(--low-bg);color:var(--low-fg)}.pill.out{background:var(--danger-bg);color:var(--red)}.muted{color:var(--muted)}.empty{text-align:center;padding:35px;color:var(--muted)}
 .view{display:none}.view.active{display:block}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.field{display:grid;gap:6px}.field label{font-size:12px;font-weight:700;color:var(--muted)}.field input,.field select{width:100%;border:1px solid var(--line);border-radius:9px;padding:11px;background:var(--input);color:var(--ink)}.modal-bg{position:fixed;inset:0;background:#17251f88;display:none;align-items:center;justify-content:center;padding:18px;z-index:5}.modal-bg.open{display:flex}.modal{background:var(--paper);border-radius:18px;padding:24px;width:min(520px,100%);max-height:90vh;overflow:auto;box-shadow:0 25px 80px #0003}.modal h2{font:25px Georgia,serif;margin:0 0 18px}.modal-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:18px}.bill-layout{display:grid;grid-template-columns:1fr 340px;gap:18px}.bill-summary{background:var(--soft);border-radius:13px;padding:16px}.bill-summary strong{font:25px Georgia,serif}.bill-line{display:grid;grid-template-columns:2fr 90px 100px 35px;gap:8px;margin:9px 0}.bill-line input,.bill-line select{min-width:0;width:100%;padding:9px;border:1px solid var(--line);border-radius:8px;background:var(--input);color:var(--ink)}.notice{font-size:12px;color:var(--muted);margin-top:12px}.hidden{display:none!important}
-@media(max-width:900px){.shell{grid-template-columns:1fr}.sidebar{padding:14px;gap:12px}.brand{padding:0 8px}.nav{display:flex;overflow:auto}.nav button{white-space:nowrap}.side-note{display:none}main{padding:22px 16px}.cards{grid-template-columns:repeat(2,1fr)}.bill-layout{grid-template-columns:1fr}}
+@media(max-width:900px){.shell{grid-template-columns:minmax(0,1fr)}.sidebar,main{min-width:0}.sidebar{padding:14px;gap:12px}.brand{padding:0 8px}.nav{display:flex;overflow:auto}.nav button{white-space:nowrap}.side-note{display:none}main{padding:22px 16px}.cards{grid-template-columns:repeat(2,1fr)}.bill-layout{grid-template-columns:1fr}}
 @media(max-width:540px){.top{align-items:flex-start;flex-direction:column}.top h1{font-size:28px}.cards{gap:9px}.stat{padding:13px}.stat strong{font-size:23px}.panel{padding:14px;overflow:auto}.form-grid{grid-template-columns:1fr}.bill-line{grid-template-columns:1fr 65px 80px 30px}table{min-width:600px}}
 @media print{@page{margin:0}html,body{background:#fff!important;margin:0}body *{visibility:hidden}.modal-bg,.modal{position:static!important;background:none!important;box-shadow:none!important;padding:0!important;max-height:none!important;overflow:visible!important}.print-area,.print-area *{visibility:visible}.print-area{position:absolute;left:0;top:0;padding:0!important;background:none!important}.print-area{width:100%}.rcpt{box-shadow:none!important;padding:4mm 0!important;margin:0 auto!important}.no-print{display:none!important}}
 
@@ -43,6 +43,24 @@ table{width:100%;border-collapse:collapse;text-align:left}th{font-size:11px;lett
 .combo-opt mark{background:var(--mark);color:inherit;border-radius:3px;padding:0 1px}
 .combo-empty{padding:12px;color:var(--muted);font-size:13px}
 .theme-btn{display:inline-flex;align-items:center;gap:6px}.login-theme{position:absolute;top:16px;right:16px;background:#ffffff22;color:#fff}
+
+.cash-layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:20px;align-items:start}.cash-layout>*{min-width:0}
+.cash-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(178px,1fr));gap:12px}
+.cash-card{border:1px solid var(--line);border-radius:14px;padding:13px;background:var(--input);transition:border-color .15s,box-shadow .15s}
+.cash-card.has{border-color:var(--green);box-shadow:0 0 0 1px var(--green) inset}
+.cash-top{display:flex;justify-content:space-between;align-items:center;gap:6px;margin-bottom:10px}.cash-top b{font:20px Georgia,serif;white-space:nowrap}
+.cash-tag{font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--muted);background:var(--soft);border-radius:20px;padding:3px 8px;white-space:nowrap}
+.stepper{display:grid;grid-template-columns:38px 1fr 38px;gap:6px}
+.stepper button{padding:0;height:38px;font-size:20px;line-height:1;background:var(--sage);color:var(--sage-fg)}
+.stepper input{width:100%;min-width:0;text-align:center;font-size:17px;font-weight:700;border:1px solid var(--line);border-radius:9px;background:var(--paper);color:var(--ink);-moz-appearance:textfield}
+.stepper input::-webkit-outer-spin-button,.stepper input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.cash-sub{text-align:right;color:var(--muted);font-size:13px;margin-top:9px}.cash-card.has .cash-sub{color:var(--sage-fg);font-weight:700}
+.cash-summary{position:sticky;top:20px}.cash-summary strong.big{display:block;font:34px Georgia,serif;margin:4px 0 2px}
+.cash-summary .field{margin-top:13px}
+.cash-rows{margin:16px 0 4px;border-top:1px solid var(--line)}.cash-rows div{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--row);font-size:14px}.cash-rows span{color:var(--muted)}
+.diff-ok{color:var(--sage-fg)}.diff-bad{color:var(--red)}
+@media(max-width:900px){.cash-layout{grid-template-columns:minmax(0,1fr)}.cash-summary{position:static}}
+@media(max-width:540px){.cash-top b{font-size:17px}.cash-tag{font-size:9px;padding:2px 6px;letter-spacing:.3px}.cash-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.cash-card{padding:10px}.stepper{grid-template-columns:32px 1fr 32px}.stepper button{height:34px}}
 </style><style id="pageStyle"></style></head>
 <body>
 <div class="busy" id="busy"><div id="busyMsg">Working…</div></div>
@@ -56,6 +74,7 @@ table{width:100%;border-collapse:collapse;text-align:left}th{font-size:11px;lett
   <button data-view="billing">▧ &nbsp; Create a bill</button>
   <button data-view="sales">▥ &nbsp; Sales & bills</button>
   <button data-view="customers">♙ &nbsp; Customers</button>
+  <button data-view="cash">◉ &nbsp; Cash count</button>
   <button data-view="history">◷ &nbsp; Stock history</button>
  </nav>
  <div class="user-tools"><span id="userLabel">Signed in</span><button class="secondary small" onclick="openChangePassword()">Change Password</button><button class="secondary small" onclick="logout()">Sign out</button></div>
@@ -88,6 +107,21 @@ table{width:100%;border-collapse:collapse;text-align:left}th{font-size:11px;lett
 </section>
 <section class="view" id="sales"><div class="panel"><div class="panel-head"><h2>Sales & bills</h2><input class="search" id="salesSearch" placeholder="Search bill or customer…" oninput="renderSales()"></div><div id="salesTable"></div></div></section>
 <section class="view" id="customers"><div class="panel"><div class="panel-head"><h2>Customer directory</h2><div class="toolbar"><input class="search" id="customerSearch" placeholder="Search customers…" oninput="renderCustomers()"><button class="primary admin-only" onclick="openCustomer()">＋ Add customer</button></div></div><div id="customerTable"></div></div></section>
+<section class="view" id="cash">
+ <div class="cash-layout">
+  <div class="panel"><div class="panel-head"><h2>Count the cash drawer</h2><button class="secondary small" onclick="resetCash()">Reset</button></div><p class="muted" style="margin:-6px 0 16px">Enter how many of each note and coin you have, or use − and +.</p><div class="cash-grid" id="cashGrid"></div></div>
+  <div class="panel cash-summary">
+   <div class="eyebrow">Counted total</div><strong class="big" id="cashTotal">LKR 0.00</strong><div class="muted" id="cashPieces">0 notes · 0 coins</div>
+   <div class="field"><label>Count date</label><input type="date" id="cashDate" onchange="calcCash()"></div>
+   <div class="field"><label>Opening float (LKR)</label><input type="number" id="cashFloat" min="0" step="0.01" value="0" oninput="calcCash()"></div>
+   <div class="cash-rows"><div><span>Cash sales</span><b id="cashSales">LKR 0.00</b></div><div><span>Expected in drawer</span><b id="cashExpected">LKR 0.00</b></div><div><span>Difference</span><b id="cashDiff">—</b></div></div>
+   <div class="field"><label>Note (optional)</label><input id="cashNote" maxlength="200" placeholder="e.g. End of day"></div>
+   <button class="primary" style="width:100%;margin-top:16px" onclick="saveCashCount()">Save count</button>
+   <p class="notice">Cash sales are the bills paid by Cash on the count date. Expected = opening float + cash sales.</p>
+  </div>
+ </div>
+ <div class="panel"><div class="panel-head"><h2>Saved counts</h2></div><div id="cashHistory"></div></div>
+</section>
 <section class="view" id="history"><div class="panel"><div class="panel-head"><h2>Stock movement history</h2><span class="pill">Receipts & sales recorded</span></div><p class="muted">Every stock receipt and sale is kept here for future reference.</p><div id="historyTable"></div></div></section>
 </main></div>
 <div class="modal-bg" id="modalBg" onclick="if(event.target===this)closeModal()"><div class="modal" id="modal"></div></div>
@@ -99,7 +133,7 @@ const API_URL='https://script.google.com/macros/s/AKfycbymMsyOn_1PexbzI_pxe4idCu
 const SHOP={name:'SDI Fashion',tagline:'FASHION HOUSE',address:'Opposite Shilpagayawa, Mulanagoda Road, Angunukolapelessa',phone:'0742280809',email:'',footer:'Goods once sold can be exchanged within 7 days with this bill.',paper:'env10'}; // paper: 'env10' (Envelope #10, 4.125 x 9.5 in), '80mm' or '58mm'
 
 const TOKEN_KEY='sdifashion_session';
-let data={products:[],customers:[],sales:[],stockHistory:[]};
+let data={products:[],customers:[],sales:[],stockHistory:[],cashCounts:[]};
 let currentUser=null;
 
 /* ---------- API ---------- */
@@ -133,7 +167,7 @@ function startSession(user,d){
   applyRole();showView(isAdmin()?'dashboard':'billing');
 }
 function endSession(msg){
-  sessionStorage.removeItem(TOKEN_KEY);currentUser=null;data={products:[],customers:[],sales:[],stockHistory:[]};
+  sessionStorage.removeItem(TOKEN_KEY);currentUser=null;data={products:[],customers:[],sales:[],stockHistory:[],cashCounts:[]};
   closeModal();document.getElementById('billLines').innerHTML='';
   document.getElementById('appShell').style.display='none';
   document.getElementById('loginScreen').style.display='flex';
@@ -164,7 +198,8 @@ function showView(v){
   if(ADMIN_VIEWS.includes(v)&&!isAdmin())v='billing';
   document.querySelectorAll('.view').forEach(x=>x.classList.toggle('active',x.id===v));
   document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.view===v));
-  document.getElementById('pageTitle').textContent=({dashboard:"Good day. Here's your overview.",inventory:'Your inventory',billing:'Create a bill',sales:'Sales & bills',customers:'Your customers',history:'Stock history'})[v];
+  document.getElementById('pageTitle').textContent=({dashboard:"Good day. Here's your overview.",inventory:'Your inventory',billing:'Create a bill',sales:'Sales & bills',customers:'Your customers',history:'Stock history',cash:'Cash count'})[v];
+  if(v==='cash')buildCashGrid();
   if(v==='billing'){populateCustomers();if(!document.querySelector('.bill-line'))addBillLine()}
   renderAll();
 }
@@ -194,6 +229,33 @@ async function saveCustomer(e,id){e.preventDefault();if(!requireAdmin())return;c
 /* ---------- Password ---------- */
 function openChangePassword(){openModal(`<h2>Change your password</h2><form onsubmit="changePassword(event)"><div class="field"><label>Current password</label><input name="old" type="password" required autocomplete="current-password"></div><div class="field" style="margin-top:12px"><label>New password</label><input name="nw" type="password" minlength="8" required autocomplete="new-password"></div><div class="field" style="margin-top:12px"><label>Confirm new password</label><input name="nw2" type="password" minlength="8" required autocomplete="new-password"></div><div class="modal-actions"><button type="button" class="secondary" onclick="closeModal()">Cancel</button><button class="primary">Change password</button></div></form>`)}
 async function changePassword(e){e.preventDefault();const f=Object.fromEntries(new FormData(e.target));if(f.nw!==f.nw2){alert('New passwords do not match.');return}await run(async()=>{await api('changePassword',{oldPassword:f.old,newPassword:f.nw});closeModal();alert('Password changed.')})}
+
+/* ---------- Cash count ---------- */
+const DENOMS=[[5000,'Note'],[2000,'Note'],[1000,'Note'],[500,'Note'],[100,'Note'],[50,'Note'],[20,'Note / Coin'],[10,'Coin'],[5,'Coin'],[2,'Coin'],[1,'Coin']];
+const CASH_KEY='sdi_cash_draft';
+const rs=n=>'Rs. '+Number(n).toLocaleString('en-LK');
+function buildCashGrid(){const g=document.getElementById('cashGrid');if(g.children.length){calcCash();return}
+let d={};try{d=JSON.parse(localStorage.getItem(CASH_KEY)||'{}')}catch(e){}
+g.innerHTML=DENOMS.map(([v,t])=>`<div class="cash-card" id="cc${v}"><div class="cash-top"><b>${rs(v)}</b><span class="cash-tag">${t}</span></div><div class="stepper"><button type="button" onclick="stepCash(${v},-1)" aria-label="Less">−</button><input type="number" inputmode="numeric" min="0" step="1" data-d="${v}" value="${(d.counts||{})[v]||''}" placeholder="0" aria-label="Rs. ${v} count"><button type="button" onclick="stepCash(${v},1)" aria-label="More">+</button></div><div class="cash-sub" id="cs${v}">Rs. 0.00</div></div>`).join('');
+document.getElementById('cashDate').value=d.date||localDate();document.getElementById('cashFloat').value=d.openingFloat??0;calcCash()}
+function cashCounts(){const c={};document.querySelectorAll('#cashGrid input').forEach(i=>{const n=Math.max(0,Math.floor(+i.value||0));if(n)c[i.dataset.d]=n});return c}
+function stepCash(v,delta){const i=document.querySelector(`#cashGrid input[data-d="${v}"]`);i.value=Math.max(0,Math.floor(+i.value||0)+delta)||'';calcCash()}
+function cashSalesFor(date){return data.sales.filter(s=>s.date===date&&s.payment==='Cash').reduce((t,s)=>t+(+s.total||0),0)}
+function calcCash(){const c=cashCounts();let total=0,notes=0,coins=0;
+DENOMS.forEach(([v,t])=>{const n=c[v]||0;total+=v*n;if(v>=50)notes+=n;else if(v<=10)coins+=n;else notes+=n;document.getElementById('cs'+v).textContent=money(v*n).replace('LKR','Rs.');document.getElementById('cc'+v).classList.toggle('has',n>0)});
+const date=document.getElementById('cashDate').value||localDate(),fl=Math.max(0,+document.getElementById('cashFloat').value||0),sales=cashSalesFor(date),exp=fl+sales,diff=total-exp;
+document.getElementById('cashTotal').textContent=money(total);document.getElementById('cashPieces').textContent=`${notes} note${notes===1?'':'s'} · ${coins} coin${coins===1?'':'s'}`;
+document.getElementById('cashSales').textContent=money(sales);document.getElementById('cashExpected').textContent=money(exp);
+const de=document.getElementById('cashDiff');de.className=Math.abs(diff)<0.005?'diff-ok':'diff-bad';de.textContent=Math.abs(diff)<0.005?'Balanced ✓':(diff>0?'Over by ':'Short by ')+money(Math.abs(diff));
+try{localStorage.setItem(CASH_KEY,JSON.stringify({counts:c,date,openingFloat:fl}))}catch(e){}}
+function resetCash(){if(Object.keys(cashCounts()).length&&!confirm('Clear all counts?'))return;document.querySelectorAll('#cashGrid input').forEach(i=>i.value='');document.getElementById('cashNote').value='';calcCash()}
+document.addEventListener('input',e=>{if(e.target.matches('#cashGrid input'))calcCash()});
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.matches('#cashGrid input')){e.preventDefault();const all=[...document.querySelectorAll('#cashGrid input')],i=all.indexOf(e.target);(all[i+1]||document.getElementById('cashFloat')).focus()}});
+document.addEventListener('focusin',e=>{if(e.target.matches('#cashGrid input'))e.target.select()});
+async function saveCashCount(){const counts=cashCounts();if(!Object.keys(counts).length&&!confirm('All counts are zero. Save anyway?'))return;
+await run(async()=>{const out=await api('saveCashCount',{count:{date:document.getElementById('cashDate').value,openingFloat:document.getElementById('cashFloat').value,note:document.getElementById('cashNote').value,counts}});data=out.data;document.querySelectorAll('#cashGrid input').forEach(i=>i.value='');document.getElementById('cashNote').value='';renderAll();alert('Cash count saved.')},'Saving count…')}
+function renderCashHistory(){const a=data.cashCounts||[],el=document.getElementById('cashHistory');if(!el)return;el.innerHTML=a.length?`<table><thead><tr><th>Date</th><th>Counted</th><th>Expected</th><th>Difference</th><th>Counted by</th><th>Note</th><th></th></tr></thead><tbody>${a.map(c=>{const ok=Math.abs(+c.difference||0)<0.005;return`<tr><td>${esc(c.date)}<br><span class="muted">${c.createdAt?new Date(c.createdAt).toLocaleTimeString('en-LK',{hour:'2-digit',minute:'2-digit'}):''}</span></td><td><b>${money(c.total)}</b></td><td>${money(c.expected)}</td><td class="${ok?'diff-ok':'diff-bad'}"><b>${ok?'Balanced':(c.difference>0?'+':'−')+money(Math.abs(c.difference))}</b></td><td>${esc(c.by)}</td><td>${esc(c.note||'—')}</td><td><button class="secondary small" onclick="viewCashCount('${esc(c.id)}')">View</button></td></tr>`}).join('')}</tbody></table>`:'<div class="empty">Saved cash counts will appear here.</div>'}
+function viewCashCount(id){const c=(data.cashCounts||[]).find(x=>x.id===id);if(!c)return;const k=c.counts||{};openModal(`<h2>Cash count · ${esc(c.date)}</h2><table><thead><tr><th>Denomination</th><th style="text-align:right">Count</th><th style="text-align:right">Amount</th></tr></thead><tbody>${DENOMS.filter(([v])=>k[v]).map(([v])=>`<tr><td>${rs(v)}</td><td style="text-align:right">${k[v]}</td><td style="text-align:right">${money(v*k[v])}</td></tr>`).join('')||'<tr><td colspan="3" class="muted">No cash counted</td></tr>'}</tbody></table><div class="cash-rows"><div><span>Counted total</span><b>${money(c.total)}</b></div><div><span>Opening float</span><b>${money(c.openingFloat)}</b></div><div><span>Cash sales</span><b>${money(c.cashSales)}</b></div><div><span>Expected</span><b>${money(c.expected)}</b></div><div><span>Difference</span><b class="${Math.abs(+c.difference||0)<0.005?'diff-ok':'diff-bad'}">${Math.abs(+c.difference||0)<0.005?'Balanced':(c.difference>0?'Over by ':'Short by ')+money(Math.abs(c.difference))}</b></div></div><p class="muted">Counted by ${esc(c.by)}${c.note?' · '+esc(c.note):''}</p><div class="modal-actions"><button class="secondary" onclick="closeModal()">Close</button></div>`)}
 
 /* ---------- Rendering ---------- */
 function stockBadge(p){return p.qty<=0?'<span class="pill out">Out of stock</span>':p.qty<=(p.threshold??5)?'<span class="pill low">Low stock</span>':'<span class="pill">In stock</span>'}
@@ -262,7 +324,7 @@ function renderSales(){let q=(document.getElementById('salesSearch')?.value||'')
 function renderDashboard(){let todays=data.sales.filter(s=>s.date===localDate()),salesToday=todays.reduce((sum,s)=>sum+(+s.total||0),0),profitToday=todays.reduce((sum,s)=>sum+(s.profit==null?0:+s.profit),0);document.getElementById('dailySales').textContent=money(salesToday);document.getElementById('dailyProfit').textContent=money(profitToday);document.getElementById('dailyBills').textContent=todays.length;document.getElementById('statItems').textContent=data.products.length;document.getElementById('statUnits').textContent=data.products.reduce((s,p)=>s+(+p.qty||0),0).toLocaleString();let low=data.products.filter(p=>p.qty<=(p.threshold??5));document.getElementById('statLow').textContent=low.length;document.getElementById('statSales').textContent=data.sales.length;document.getElementById('dashStock').innerHTML=low.length?`<table><thead><tr><th>Item</th><th>Available</th><th>Status</th></tr></thead><tbody>${low.slice(0,6).map(p=>`<tr><td>${esc(p.name)}</td><td>${p.qty} ${esc(p.unit)}</td><td>${stockBadge(p)}</td></tr>`).join('')}</tbody></table>`:'<div class="empty">All items are above their low-stock alert levels.</div>';document.getElementById('dashBills').innerHTML=data.sales.length?`<table><thead><tr><th>Bill</th><th>Customer</th><th>Date</th><th>Total</th></tr></thead><tbody>${data.sales.slice(0,5).map(s=>`<tr><td>${esc(s.number)}</td><td>${esc(s.customer)}</td><td>${esc(s.date)}</td><td>${money(s.total)}</td></tr>`).join('')}</tbody></table>`:'<div class="empty">No sales recorded yet.</div>'}
 function renderHistory(){let a=data.stockHistory||[];document.getElementById('historyTable').innerHTML=a.length?`<table><thead><tr><th>Date & time</th><th>Movement</th><th>Item</th><th>Quantity change</th><th>Reference</th><th>Recorded by</th></tr></thead><tbody>${a.map(h=>`<tr><td>${new Date(h.date).toLocaleString()}</td><td>${esc(h.type)}</td><td><b>${esc(h.product)}</b></td><td style="font-weight:700;color:${h.qty<0?'var(--red)':'var(--sage-fg)'}">${h.qty>0?'+':''}${h.qty} ${esc(h.unit)}</td><td>${esc(h.reference||'—')}</td><td>${esc(h.by||'—')}</td></tr>`).join('')}</tbody></table>`:'<div class="empty">Stock additions and sales movements will appear here.</div>'}
 function refreshBillLineOptions(){document.querySelectorAll('.line-product').forEach(s=>{const v=s.value;s.innerHTML=productOptions();s.value=v;const c=s.closest('.combo');if(c&&!c.classList.contains('open'))comboClose(c)})}
-function renderAll(){if(!currentUser)return;if(isAdmin())renderDashboard();renderInventory();renderCustomers();renderSales();renderHistory();refreshBillLineOptions();if(document.getElementById('billing').classList.contains('active'))populateCustomers();calcBill()}
+function renderAll(){if(!currentUser)return;renderCashHistory();if(document.getElementById('cashGrid').children.length)calcCash();if(isAdmin())renderDashboard();renderInventory();renderCustomers();renderSales();renderHistory();refreshBillLineOptions();if(document.getElementById('billing').classList.contains('active'))populateCustomers();calcBill()}
 
 /* ---------- Boot: resume session after page refresh ---------- */
 (async()=>{if(!sessionStorage.getItem(TOKEN_KEY))return;await run(async()=>{const out=await api('session');startSession(out.user,out.data)},'Loading…')})();
